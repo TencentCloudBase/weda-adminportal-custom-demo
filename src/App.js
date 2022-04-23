@@ -11,7 +11,7 @@ App.init({
   // 企业工作台
   type: 'portal',
   // 是否访问正式环境数据
-  isProd: false,
+  isProd: true,
   // 微搭环境id
   envId: process.env.REACT_APP_ENV_ID,
   // 向子应用注入主应用的登录方法，当子应用登录失效时可以调用该方法重新登录
