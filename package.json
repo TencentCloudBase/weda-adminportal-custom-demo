@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@cloudbase/weda-client": "^0.1.12-alpha.2",
+    "@cloudbase/weda-client": "^0.1.12-alpha.4",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.0.1",
     "@testing-library/user-event": "^13.5.0",

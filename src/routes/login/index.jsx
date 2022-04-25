@@ -1,6 +1,6 @@
 import './login.css'
 import { useState } from 'react';
-import { Auth } from "@cloudbase/weda-client";
+import { auth } from "@cloudbase/weda-client";
 
 export default function Login() {
   const [errorMessages, setErrorMessages] = useState({});
@@ -34,7 +34,7 @@ export default function Login() {
 
     if (username && password) {
       // 账号密码登录
-      Auth.signIn(
+      auth.signIn(
         { username, password }
       ).then(() => {
         window.location.href = '/'

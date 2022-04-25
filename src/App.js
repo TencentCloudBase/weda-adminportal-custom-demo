@@ -4,10 +4,10 @@ import history from './history'
 import './App.css'
 import { initMicroApps } from './utils/micro-app';
 import { PortalContext } from "./context";
-import { App, Auth } from "@cloudbase/weda-client";
+import { app, auth } from "@cloudbase/weda-client";
 
 // 初始化微搭企业工作台
-App.init({
+app.init({
   // 企业工作台
   type: 'portal',
   // 是否访问正式环境数据
@@ -32,7 +32,7 @@ export default function DemoApp() {
 
   useEffect(() => {
     // 监听登录状态
-    Auth.onLoginStateChanged(async ({ appInfo, userInfo}) => {
+    auth.onLoginStateChanged(async ({ appInfo, userInfo}) => {
       if (userInfo) {
         // 此时用户已经登录
         setUser(userInfo);
@@ -52,7 +52,7 @@ export default function DemoApp() {
   const renderLogin = <Link to="/login">登录</Link>
 
   const logoutHandler = () => {
-    Auth.signOut().then(() => {
+    auth.signOut().then(() => {
       window.location = '/'
     })
   };
